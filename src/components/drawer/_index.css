@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+@variant dark (.dark &);
+
+.menudraw {
+  @apply w-[200px] bg-white/70 dark:bg-black/70 absolute left-0 top-9;
+  @apply p-1 backdrop-blur-xl;
+  @apply grid grid-cols-1 auto-rows-auto;
+  @apply transition-all duration-200 origin-top;
+  @apply rounded-br-xl;
+  pointer-events: none;
+}
+
+.menudraw.open {
+  @apply opacity-100 scale-100 translate-y-0;
+  pointer-events: auto;
+}
+
+.menudraw.closed {
+  @apply opacity-0 scale-95 -translate-y-2;
+  pointer-events: none;
+}
+
+.option {
+  @apply text-lg flex h-8 justify-center items-center flex flex-row gap-3;
+  @apply border-b border-black/80 last:border-b-0;
+  @apply cursor-pointer transition-all duration-150;
+}

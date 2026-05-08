@@ -1,0 +1,33 @@
+@reference "tailwindcss";
+@variant dark (.dark &);
+
+/**
+STATUSBAR COMPONENTS
+*/
+.statusbar {
+  @apply w-full text-sm h-9 absolute top-0 left-0;
+  @apply flex justify-center items-center;
+  @apply backdrop-blur-2xl text-lg;
+  @apply bg-white/70 text-black dark:bg-black/60 dark:text-white;
+}
+
+.startbtn {
+  @apply absolute left-0 flex h-9 w-30 items-center justify-center;
+  @apply text-white cursor-pointer font-semibold;
+  @apply transition-all duration-300;
+  background-size: 200% 200%;
+  background-image: linear-gradient(90deg, #f23abaf3, #ff580fff);
+  background-position: left;
+}
+
+.startbtn.opened {
+  background-position: right;
+}
+
+.right-panel {
+  @apply flex flex-row gap-2 absolute right-3 justify-center items-center;
+}
+
+.timebox {
+  @apply flex justify-center items-center;
+}

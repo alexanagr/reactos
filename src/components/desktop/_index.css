@@ -1,0 +1,21 @@
+@reference "tailwindcss";
+@variant dark (.dark &);
+
+
+.desktop {
+  @apply min-h-screen bg-cover bg-center;
+  @apply text-black dark:text-white;
+}
+
+.launchers {
+  @apply absolute top-15 left-5 flex flex-row;
+}
+
+.launcher {
+  @apply w-18 h-18 p-5 flex cursor-pointer flex-col justify-center;
+  @apply rounded-lg items-center hover:bg-white/30;
+}
+
+.bg-sunset {
+  @apply bg-gradient-to-r from-slate-900 to-slate-700;
+}
