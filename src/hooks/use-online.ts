@@ -10,7 +10,6 @@ export function useOnlineStatus() {
 
     const handleOffline = () => {
       setIsOnline(false);
-      console.log("Connection is Offline....");
     };
 
     window.addEventListener("online", handleOnline);
