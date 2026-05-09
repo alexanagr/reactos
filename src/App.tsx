@@ -6,6 +6,7 @@ import useConfig from "./hooks/use-config";
 import Desktop from "@/components/desktop";
 import MenuDraw from "./components/drawer";
 import Launchers from "./components/desktop/Launchers";
+import StatusPopup from "@/components/modals/StatusPopup";
 import StatusBar from "@/components/statusbar";
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
       <Launchers />
       <MenuDraw />
       <StatusBar />
+      <StatusPopup />
     </Desktop>
   );
 }
