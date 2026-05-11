@@ -27,10 +27,14 @@ const configSlice = createSlice({
     toggleDarkMode(state) {
       state.darkMode = !state.darkMode;
     },
+
+    restoreConfig: (state, action: PayloadAction<ConfigState>) => {
+      return action.payload;
+    },
   },
 });
 
-export const { setLanguage, setBackground, toggleDarkMode } =
+export const { setLanguage, setBackground, toggleDarkMode, restoreConfig } =
   configSlice.actions;
 
 export default configSlice.reducer;
