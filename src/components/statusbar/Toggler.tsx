@@ -1,5 +1,6 @@
 // hooks
 import useConfig from "@/hooks/use-config";
+import { useTranslation } from "react-i18next";
 
 // components
 import { RiContrast2Line } from "@remixicon/react";
@@ -7,7 +8,12 @@ import { RiContrast2Line } from "@remixicon/react";
 export default function Toggler() {
   const { darkMode, setDayNight } = useConfig();
 
-  const tooltip = `Switch to ${darkMode ? "light" : "dark"} mode`;
+  const { t } = useTranslation();
+
+  const d = t("statusbar.darkmode.setdark");
+  const l = t("statusbar.darkmode.setlight");
+
+  const tooltip = darkMode ? l : d;
 
   return (
     <div onClick={setDayNight} title={tooltip}>
