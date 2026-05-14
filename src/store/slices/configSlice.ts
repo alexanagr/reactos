@@ -28,7 +28,7 @@ const configSlice = createSlice({
       state.darkMode = !state.darkMode;
     },
 
-    restoreConfig: (state, action: PayloadAction<ConfigState>) => {
+    restoreConfig: (_state, action: PayloadAction<ConfigState>) => {
       return action.payload;
     },
   },
